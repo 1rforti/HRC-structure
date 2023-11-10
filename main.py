@@ -84,7 +84,7 @@ def realizar_atualizacao(prints_queue):
             response_updater = requests.get(url_updater)
 
             if response_updater.status_code == 200:
-                with open("phyton", "C:\\HRCStructureHHHHeadsUp\\main2.py", "wb") as file:
+                with open("C:\\HRCStructureHHHHeadsUp\\main2.exe", "wb") as file:
                     file.write(response_updater.content)
 
                 # Salvar o SHA do commit mais recente para o próximo teste de atualização
@@ -602,7 +602,8 @@ capile_label.bind('<Button-1>', lambda event: open_link_livepix())
 def run_main2_with_gif(stack_inicial):
     def start_process():
         # Inicie o subprocesso sem exibir a janela de console
-        process = subprocess.Popen(["Phyton", "C:\\HRCStructureHHHHeadsUp\\main2.py", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        # Substitua "Phyton" por "python"
+        process = subprocess.Popen(["python", "C:\\HRCStructureHHHHeadsUp\\main2.py", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
         # Aguarde a conclusão do processo
         process.wait()
         # Quando o processo terminar, marque a variável como True

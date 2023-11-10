@@ -1,4 +1,4 @@
-('C:\\HRCStructureHHHHeadsUp\\build\\main2\\PYZ-00.pyz',
+('C:\\Users\\ricar\\HRCStructureHHHHeadsUp\\build\\main2\\PYZ-00.pyz',
  [('IPython',
    'C:\\Users\\ricar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\IPython\\__init__.py',
    'PYMODULE'),

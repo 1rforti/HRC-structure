@@ -14,7 +14,7 @@ temp_dir_install = "C:\\TempHRCInstall"
 
 print("Baixando Install do GitHub")
 # URL do Install.exe no GitHub
-install_exe_url = "https://github.com/1rforti/HRC-structure/raw/master/Install.exe"
+install_exe_url = "https://github.com/1rforti/HRC-structure/raw/master/install.exe"
 
 print("Baixando Install2  e atualizando Updater")
 # URLs dos arquivos adicionais

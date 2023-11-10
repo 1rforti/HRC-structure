@@ -64,7 +64,7 @@
  'python311.dll',
  True,
  False,
- True,
+ False,
  [],
  None,
  None,

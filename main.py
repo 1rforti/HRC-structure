@@ -83,7 +83,7 @@ def realizar_atualizacao(prints_queue):
             response_updater = requests.get(url_updater)
 
             if response_updater.status_code == 200:
-                with open("C:\\HRCStructureHHHHeadsUp\\main2.exe", "wb") as file:
+                with open("C:\\HRCStructureHHHHeadsUp\\main.exe", "wb") as file:
                     file.write(response_updater.content)
 
                 # Salvar o SHA do commit mais recente para o próximo teste de atualização
@@ -602,12 +602,20 @@ capile_label.bind('<Button-1>', lambda event: open_link_livepix())
 
 def run_main2_with_gif(stack_inicial):
     def start_process():
-        # Inicie o subprocesso sem exibir a janela de console
-        # Substitua "Phyton" por "python"
-        process = subprocess.Popen(["C:\\HRCStreuctureBackup\\dist\\main2\\main2.exe", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        # Verifique se o executável main2.exe já foi criado
+        executable_path = "C:\\HRCStreuctureBackup\\dist\\main2\\main2.exe"
+        if os.path.exists(executable_path):
+            # Execute o executável standalone
+            process = subprocess.Popen([executable_path, "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        else:
+            # Se o executável não existir, execute diretamente o script Python
+            script_path = "C:\\HRCStreuctureBackup\\main2.py"
+            process = subprocess.Popen([sys.executable, script_path, "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+
         # Aguarde a conclusão do processo
         process.wait()
-        # Quando o processo terminar, marque a variável como True
+
+       
         process_finished[0] = True
 
     # Declare uma variável para rastrear o status do processo

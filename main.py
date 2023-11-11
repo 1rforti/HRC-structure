@@ -116,6 +116,8 @@ def realizar_atualizacao(prints_queue):
                 prints_queue.put("Erro ao baixar o Updater.")
         else:
             prints_queue.put("Nenhuma atualização disponível.")
+            time.sleep(3)
+            prints_queue.put("Seu software será iniciado em breve.")
     else:
         prints_queue.put("Erro ao verificar atualizações.")
         
@@ -140,7 +142,7 @@ def agendar_fechamento():
 
     else:
         # Se não houver atualização, agende o fechamento da janela após 20 segundos
-        janela.after(15000, fechar_janela)
+        janela.after(10000, fechar_janela)
         
 def janela_com_gif_e_prints():
     global janela, gif_label, prints_label, encerrar_threads, gif_frames
@@ -184,7 +186,7 @@ def janela_com_gif_e_prints():
     install_thread.start()
 
     # Agende o fechamento da janela após 20 segundos
-    janela.after(15000, agendar_fechamento)
+    janela.after(10000, agendar_fechamento)
 
     janela.mainloop()
 
@@ -602,7 +604,7 @@ def run_main2_with_gif(stack_inicial):
     def start_process():
         # Inicie o subprocesso sem exibir a janela de console
         # Substitua "Phyton" por "python"
-        process = subprocess.Popen(["python", "C:\\HRCStructureHHHHeadsUp\\main2.py", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        process = subprocess.Popen(["C:\\HRCStreuctureBackup\\dist\\main2\\main2.exe", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
         # Aguarde a conclusão do processo
         process.wait()
         # Quando o processo terminar, marque a variável como True

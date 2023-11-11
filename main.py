@@ -1,4 +1,8 @@
-﻿import json
+﻿
+import sys
+import io
+import os
+import json
 import xmltodict
 import webbrowser
 import zipfile
@@ -12,18 +16,13 @@ from tkinter import PhotoImage
 from tkinter import ttk
 from PIL import Image, ImageTk, ImageSequence
 import shutil
-import sys
-import io
-import os
-import tkinter as tk
 import subprocess
 import psutil
 import threading
 from screeninfo import get_monitors
+import queue
 from queue import Queue, Empty
 import time
-import queue
-from queue import Empty
 
 
 
@@ -103,32 +102,11 @@ def realizar_atualizacao(prints_queue):
                     import UpdaterHrcStructure
 
                     prints_queue.put("Aguarde, atualização em andamento...")
-                    time.sleep(2)
-                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
-                    time.sleep(2)
-                    prints_queue.put("E aguarde o instalador por alguns segundos")
-                    time.sleep(2)
-                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
-                    time.sleep(2)
-                    prints_queue.put("Aguarde o instalador por alguns segundos")
-                    time.sleep(2)
-                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
-                    time.sleep(2)
-                    prints_queue.put("Aguarde, atualização em andamento...")
-                    time.sleep(2)
-                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
-                    time.sleep(2)
-                    prints_queue.put("E Aguarde o instalador por alguns segundos")
-                    time.sleep(2)
-                    # Importe UpdaterHrcStructure apenas se for necessário
-                    # Use uma função lambda para chamar UpdaterHrcStructure.main sem argumentos
-                    UpdaterHrcStructure.main_lambda = lambda: UpdaterHrcStructure.main()
-                    UpdaterHrcStructure.main_lambda()
 
-                                       
+                    # Chame UpdaterHrcStructure.main passando a fila de prints
+                    UpdaterHrcStructure.main(prints_queue)
+                                                
 
-                    # Se o usuário deseja encerrar o programa, chame a função para encerrar
-                    close_main_program()
 
                 else:
                     # Usuário escolheu "Não"

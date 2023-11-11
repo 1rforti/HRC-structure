@@ -602,20 +602,17 @@ capile_label.bind('<Button-1>', lambda event: open_link_livepix())
 
 def run_main2_with_gif(stack_inicial):
     def start_process():
-        # Verifique se o executável main2.exe já foi criado
-        executable_path = "C:\\HRCStreuctureBackup\\dist\\main2\\main2.exe"
-        if os.path.exists(executable_path):
-            # Execute o executável standalone
-            process = subprocess.Popen([executable_path, "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
-        else:
-            # Se o executável não existir, execute diretamente o script Python
-            script_path = "C:\\HRCStreuctureBackup\\main2.py"
-            process = subprocess.Popen([sys.executable, script_path, "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        # Inicie o subprocesso sem exibir a janela de console
+        
+        # Crie o caminho absoluto para o main2.py
+        main2_path = os.path.abspath(os.path.join("C:\\HRCStructureHHHHeadsUp", "main2.py"))
 
+        # Inicie o processo usando python e main2.py
+        process = subprocess.Popen([sys.executable, main2_path, "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        
         # Aguarde a conclusão do processo
         process.wait()
-
-       
+        # Quando o processo terminar, marque a variável como True
         process_finished[0] = True
 
     # Declare uma variável para rastrear o status do processo

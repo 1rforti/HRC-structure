@@ -100,12 +100,32 @@ def realizar_atualizacao(prints_queue):
 
                 if usuario_decidiu_evento.is_set():
                     # Usuário escolheu "Sim"
-                    prints_queue.put("Aguarde, atualização em andamento...")
-                    # Importe UpdaterHrcStructure apenas se for necessário
                     import UpdaterHrcStructure
+
+                    prints_queue.put("Aguarde, atualização em andamento...")
+                    time.sleep(2)
+                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
+                    time.sleep(2)
+                    prints_queue.put("E aguarde o instalador por alguns segundos")
+                    time.sleep(2)
+                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
+                    time.sleep(2)
+                    prints_queue.put("Aguarde o instalador por alguns segundos")
+                    time.sleep(2)
+                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
+                    time.sleep(2)
+                    prints_queue.put("Aguarde, atualização em andamento...")
+                    time.sleep(2)
+                    prints_queue.put("Encerre a janela principal e o popup, ao abrir")
+                    time.sleep(2)
+                    prints_queue.put("E Aguarde o instalador por alguns segundos")
+                    time.sleep(2)
+                    # Importe UpdaterHrcStructure apenas se for necessário
                     # Use uma função lambda para chamar UpdaterHrcStructure.main sem argumentos
                     UpdaterHrcStructure.main_lambda = lambda: UpdaterHrcStructure.main()
                     UpdaterHrcStructure.main_lambda()
+
+                                       
 
                     # Se o usuário deseja encerrar o programa, chame a função para encerrar
                     close_main_program()
@@ -186,7 +206,7 @@ def janela_com_gif_e_prints():
     install_thread.start()
 
     # Agende o fechamento da janela após 20 segundos
-    janela.after(15000, fechar_janela)
+    janela.after(15000, agendar_fechamento)
 
     janela.mainloop()
 
@@ -196,6 +216,7 @@ def janela_com_gif_e_prints():
 def close_main_program():
     try:
         os.kill(os.getpid(), 9)  # Encerre o processo principal de forma mais agressiva
+   
     except OSError:
         pass
     

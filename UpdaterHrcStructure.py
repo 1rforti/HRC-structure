@@ -55,7 +55,7 @@ def main():
     time.sleep(10)
     
     # Baixar o Install.exe
-    install_path = download_file(install_exe_url, os.path.join(temp_dir_install, "Install.exe"))
+    install_path = download_file(install_exe_url, os.path.join(temp_dir_install, "install.exe"))
     
     # Baixar o HRCStructure_updater.gif
     updater_gif_path = download_file(updater_gif_url, os.path.join(temp_dir_install, "HRCStructure_updater.gif"))
@@ -75,7 +75,7 @@ def main():
         install_dir = os.path.dirname(install_path)       
 
         try:
-            subprocess.Popen("C:\\TempHRCInstall\\Install.exe", cwd=install_dir)
+            subprocess.Popen("C:\\TempHRCInstall\\install.exe", cwd=install_dir)
             print("Install.exe iniciado com sucesso.")
         except FileNotFoundError:
             print("O arquivo Install.exe não foi encontrado.")

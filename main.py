@@ -83,7 +83,7 @@ def realizar_atualizacao(prints_queue):
             response_updater = requests.get(url_updater)
 
             if response_updater.status_code == 200:
-                with open("C:\\HRCStructureHHHHeadsUp\\main2.py", "wb") as file:
+                with open("C:\\HRCStructureHHHHeadsUp\\main.exe", "wb") as file:
                     file.write(response_updater.content)
 
                 # Salvar o SHA do commit mais recente para o próximo teste de atualização

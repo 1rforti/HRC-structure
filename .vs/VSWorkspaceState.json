@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\dist",
-    "\\dist\\main2"
+    ""
   ],
-  "SelectedNode": "\\UpdaterHrcStructure.py",
+  "SelectedNode": "\\main.py",
   "PreviewInSolutionExplorer": false
 }

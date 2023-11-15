@@ -11,8 +11,8 @@ import numpy as np
 from tkinter import Tk, filedialog, Toplevel, Label, Button
 import webbrowser
 
-caminho =  r'C:\\Program Files\\Tesseract-OCR'
-pytesseract.pytesseract.tesseract_cmd = caminho + r'\\tesseract.exe'
+caminho =  r"C:\Program Files\Tesseract-OCR"
+pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
 
 
 
@@ -133,8 +133,8 @@ for i, group in enumerate(image_groups):
     
     
 
-    caminho =  r'C:\\Program Files\\Tesseract-OCR'
-    pytesseract.pytesseract.tesseract_cmd = caminho + r'\\tesseract.exe'
+    caminho =  r"C:\Program Files\Tesseract-OCR"
+    pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
 
     custom_config = r'--oem 3 --psm 6'
     extracted_text = pytesseract.image_to_string(adjusted_image, config=custom_config)
@@ -182,8 +182,8 @@ for i, group in enumerate(image_groups):
         column_image = adjusted_image[:, x1:x2]
 
                 
-        caminho =  r'C:\\Program Files\\Tesseract-OCR'
-        pytesseract.pytesseract.tesseract_cmd = caminho + r'\\tesseract.exe'
+        caminho =  r"C:\Program Files\Tesseract-OCR"
+        pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
 
         column_text = pytesseract.image_to_string(column_image, config=custom_config)
         column_texts.append(column_text)

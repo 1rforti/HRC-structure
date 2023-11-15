@@ -1,1 +1,38 @@
-{"final_window": {"x": null, "y": null, "width": null, "height": null}, "final_window_position": {"x": 104, "y": 104, "width": 427, "height": 155}, "main_window": {"height": null, "width": null, "x": null, "y": null}, "popup_window": {"x": null, "y": null, "width": null, "height": null}, "popup_window_position": {"x": null, "y": null, "width": null, "height": null}, "root_position": {"x": 156, "y": 156, "width": 404, "height": 329}}
+{
+  "final_window": {
+    "x": null,
+    "y": null,
+    "width": null,
+    "height": null
+  },
+  "final_window_position": {
+    "x": null,
+    "y": null,
+    "width": null,
+    "height": null
+  },
+  "main_window": {
+    "height": null,
+    "width": null,
+    "x": null,
+    "y": null
+  },
+  "popup_window": {
+    "x": null,
+    "y": null,
+    "width": null,
+    "height": null
+  },
+  "popup_window_position": {
+    "x": null,
+    "y": null,
+    "width": null,
+    "height": null
+  },
+  "root_position": {
+    "x": null,
+    "y": null,
+    "width": null,
+    "height": null
+  }
+}

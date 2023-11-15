@@ -604,7 +604,7 @@ def run_main2_with_gif(stack_inicial):
     def start_process():
         # Inicie o subprocesso sem exibir a janela de console
         # Substitua "Phyton" por "python"
-        process = subprocess.Popen(["python", "C:\\HRCStructureHHHHeadsUp\\main2.exe", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+        process = subprocess.Popen(["C:\\HRCStructureHHHHeadsUp\\main2.exe", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
         # Aguarde a conclusão do processo
         process.wait()
         # Quando o processo terminar, marque a variável como True

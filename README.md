@@ -4,6 +4,20 @@
 
 Este é um software desenvolvido em Python para auxiliar os usuários do software [Holdem Resources](https://www.holdemresources.net/) na criação de estruturas de payouts solicitadas pelo software como entrada. O código transforma o arquivo .xml fornecido pelo site [SharkScope](https://pt.sharkscope.com/), acessível aos assinantes Gold na aba "Encontrar um torneio", em um arquivo .json que o HRC é capaz de ler.
 
+## Pré-requisitos
+
+Antes de instalar o software, é necessário baixar e instalar o Tesseract. Certifique-se de seguir as instruções abaixo para uma instalação adequada.
+
+### Instalação do Tesseract
+
+1. Baixe e instale o Tesseract-OCR versão 5.3.3.20231005 (64 bits) no diretório C:\Program Files\Tesseract-OCR da sua máquina: [Download Tesseract](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.3.20231005.exe)
+
+   **OU**
+
+   Para versões mais antigas, acesse [https://digi.bib.uni-mannheim.de/tesseract/](https://digi.bib.uni-mannheim.de/tesseract/) para opções de 32 e 64 bits.
+
+   Repositório do Tesseract: [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)
+
 ## Por que usar este software?
 
 Não todos os usuários possuem Python instalado e, também por conveniência, para que as atualizações cheguem automaticamente aos usuários, optei por criar um arquivo de instalação, bem como um arquivo `main.exe`. Isso permite uma experiência mais conveniente ao executar o código/software.
@@ -57,4 +71,4 @@ Converta as imagens das estruturas baixadas do pokercraft do GGPoker em JSON par
 
 ## Suporte
 
-Para qualquer dúvida ou problema, sinta-se à vontade para entrar em contato pelo e-mail [ricardoforti@hotmail.com](
+Para qualquer dúvida ou problema, sinta-se à vontade para entrar em contato pelo e-mail [ricardoforti@hotmail.com](mailto:ricardoforti@hotmail.com).

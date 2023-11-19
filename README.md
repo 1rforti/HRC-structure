@@ -30,7 +30,7 @@ Eu, Ricardo de Souza Forti, estou à disposição para quaisquer esclarecimentos
 
 ### Novas Funcionalidades 🚀🚀🚀
 
-Converta as imagens das estruturas baixadas do pokercraft do GGPoker em JSON para o HRC. [Veja como](https://youtu.be/OKlsuLPB4gs).
+Converta as imagens das estruturas baixadas do pokercraft do GGPoker em JSON para o HRC. [Veja como](https://www.youtube.com/watch?v=menrJLgvrGU).
 
 ## Como Instalar:
 

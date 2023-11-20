@@ -45,6 +45,10 @@ Abra um terminal ou prompt de comando e navegue até a pasta onde o software est
 ```bash
 openssl smime -verify -inform der -noverify -in main.exe -content main.exe -certfile certificado_publico.cer
 
+```
+Se a verificação for bem-sucedida, você verá uma mensagem indicando que a assinatura é válida.
+
+Em caso de dúvidas ou problemas, entre em contato pelo e-mail ricardoforti@hotmail.com.
 
 
 

@@ -28,6 +28,26 @@ Não todos os usuários possuem Python instalado e, também por conveniência, p
 
 Eu, Ricardo de Souza Forti, estou à disposição para quaisquer esclarecimentos a respeito da integridade do software, através do meu e-mail [ricardoforti@hotmail.com](mailto:ricardoforti@hotmail.com). É possível me encontrar não só por ele, mas facilmente por uma pesquisa rápida nas redes sociais. Sou Jogador profissional de Poker, atuo pelo maior time de poker do mundo, a 4betpokerteam há 3 anos, o que amplia quaisquer referências positivas.
 
+Os executaveis, também foram todos assinados por mim artavés do OpenSSL, voce também pode seguir as etapas abaixo para verificar a integridade do aplicativo
+
+## Verificação de Assinatura
+
+Para garantir a integridade e autenticidade do software, siga as instruções abaixo para verificar a assinatura digital usando o certificado público fornecido.
+
+### Passo 1: Baixar o Certificado Público
+
+Certifique-se de ter o certificado público `certificado_publico.cer` baixado no seu sistema. Você pode encontrar o certificado na [pasta do repositório](https://github.com/1rforti/HRC-structure/blob/master/certificado_publico.cer).
+
+### Passo 2: Verificar a Assinatura
+
+Abra um terminal ou prompt de comando e navegue até a pasta onde o software está instalado. Execute o seguinte comando para verificar a assinatura digital:
+
+```bash
+openssl smime -verify -inform der -noverify -in main.exe -content main.exe -certfile certificado_publico.cer
+
+
+
+
 ### Novas Funcionalidades 🚀🚀🚀
 
 Converta as imagens das estruturas baixadas do pokercraft do GGPoker em JSON para o HRC. [Veja como](https://www.youtube.com/watch?v=menrJLgvrGU).

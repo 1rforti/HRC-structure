@@ -1,0 +1,21 @@
+[req]
+default_bits = 2048
+default_keyfile = privkey.pem
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = BR
+ST = SaoPaulo
+L = SaoRoque
+O = HHHHeadUp Poker
+CN = Ricardo de Souza Forti
+
+[v3_req]
+basicConstraints = CA:TRUE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = YourCommonName

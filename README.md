@@ -56,6 +56,10 @@ Em caso de dúvidas ou problemas, entre em contato pelo e-mail ricardoforti@hotm
 
 Converta as imagens das estruturas baixadas do pokercraft do GGPoker em JSON para o HRC. [Veja como](https://www.youtube.com/watch?v=menrJLgvrGU).
 
+## Instruções de Instalação em Vídeo
+
+[Assista às instruções de instalação passo a passo no YouTube](https://youtu.be/rWaHJYKbLtQ)
+
 ## Como Instalar:
 
 1. **Baixe o Repositório:**

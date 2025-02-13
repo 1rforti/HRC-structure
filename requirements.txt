@@ -122,3 +122,4 @@ wrapt==1.15.0
 wsproto==1.2.0
 xmltodict==0.13.0
 zope.interface==6.1
+gunicorn

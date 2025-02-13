@@ -8,7 +8,6 @@ import cv2
 import pytesseract
 from PIL import Image
 import numpy as np
-from tkinter import Tk, filedialog, Toplevel, Label, Button
 import webbrowser
 
 caminho =  r"C:\Program Files\Tesseract-OCR"

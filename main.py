@@ -8,7 +8,7 @@ import webbrowser
 import zipfile
 import requests
 import certifi
-from PIL import Image, ImageTk, ImageSequence
+from PIL import Image, ImageSequence
 import shutil
 import subprocess
 import psutil
@@ -142,14 +142,14 @@ def janela_com_gif_e_prints():
     global janela, gif_label, prints_label, encerrar_threads, gif_frames
     
 
-    janela = tk.Tk()
+    janela = ()
     janela.title("GIF com Prints")
     janela.overrideredirect(True)
 
     gif_image = Image.open("HRCStructure.gif")
-    gif_frames = [ImageTk.PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
+    gif_frames = [PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
 
-    gif_label = tk.Label(janela, image=gif_frames[0])
+    gif_label = Label(janela, image=gif_frames[0])
     gif_label.pack()
 
     largura_gif, altura_gif = gif_image.size
@@ -159,8 +159,8 @@ def janela_com_gif_e_prints():
     y = (tela_principal[1] - altura_gif) // 2
     janela.geometry(f"{largura_gif}x{altura_gif}+{x}+{y}")
 
-    prints_label = tk.Label(janela, bg="black", fg="white", justify="left")
-    prints_label.place(relx=0.5, rely=0.05, anchor=tk.N)
+    prints_label = Label(janela, bg="black", fg="white", justify="left")
+    prints_label.place(relx=0.5, rely=0.05, anchor=N)
     fonte_personalizada = ("Arial", 11)
     prints_label["font"] = fonte_personalizada
 
@@ -210,7 +210,7 @@ def show_confirmation_popup_async():
 
 def show_confirmation_popup():
     # Crie uma janela pop-up de confirmação
-    root = tk.Tk()
+    root = ()
     root.withdraw()  # Esconda a janela principal
     user_input = messagebox.askquestion("Confirmação", "Deseja encerrar o programa e realizar a instalação/atualização?")
     return user_input
@@ -516,7 +516,7 @@ def browse_images():
         #print(f"Erro ao executar parametros_imagem.py: {str(e)}")
         
 
-root = Tk()
+root = ()
 root.title('HRCStructure - HHHHeadsUp')
 
 # Carregar o arquivo de ícone e definir o ícone da janela
@@ -608,7 +608,7 @@ def run_main2_with_gif(stack_inicial):
     process_finished = [False]
 
     # Crie uma janela para exibir o GIF
-    gif_window = tk.Toplevel()
+    gif_window = Toplevel()
     gif_window.title("GIF Window")
     gif_window.overrideredirect(True)
     
@@ -623,10 +623,10 @@ def run_main2_with_gif(stack_inicial):
 
     # Carregue o GIF com Pillow e converta em uma lista de frames
     gif_image = Image.open("HRCStructure_json.gif")
-    frames = [ImageTk.PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
+    frames = [PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
 
     # Exiba o GIF em um widget Label
-    gif_label = tk.Label(gif_window, image=frames[0])
+    gif_label = Label(gif_window, image=frames[0])
     gif_label.image = frames[0]  # Garante que a imagem não seja coletada pelo garbage collector
     gif_label.pack()
 

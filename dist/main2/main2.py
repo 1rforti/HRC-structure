@@ -412,7 +412,7 @@ def close_main_window():
 
 
 # Inicialize a janela raiz
-root = Tk()
+root = ()
 root.withdraw()  # Oculta a janela raiz
 
  #Configurar um evento para fechar a janela principal

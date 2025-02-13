@@ -113,7 +113,6 @@ tornado==6.3.3
 traitlets==5.12.0
 trio==0.22.2
 trio-websocket==0.11.1
-Twisted==23.8.0
 twisted-iocpsupport==1.0.4
 typing_extensions==4.8.0
 tzdata==2023.3

@@ -8,12 +8,6 @@ import webbrowser
 import zipfile
 import requests
 import certifi
-from tkinter import *
-from tkinter import filedialog
-from tkinter import messagebox
-import tkinter as tk
-from tkinter import PhotoImage
-from tkinter import ttk
 from PIL import Image, ImageTk, ImageSequence
 import shutil
 import subprocess

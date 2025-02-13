@@ -59,8 +59,7 @@ parsel==1.8.1
 parso==0.8.3
 pefile==2023.2.7
 pickleshare==0.7.5
-Pillow==10.1.0
-platformdirs==3.11.0
+Pillow==10.1.0platformdirs==3.11.0
 pluggy==1.3.0
 prompt-toolkit==3.0.39
 Protego==0.3.0

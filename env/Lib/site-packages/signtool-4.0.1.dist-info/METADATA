@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: signtool
+Version: 4.0.1
+Summary: Mozilla Signing Tool
+Home-page: https://github.com/mozilla-releng/signtool
+Author: Release Engineers
+Author-email: release+python@mozilla.com
+License: MPL 2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+Requires-Dist: six
+
+UNKNOWN
+
+

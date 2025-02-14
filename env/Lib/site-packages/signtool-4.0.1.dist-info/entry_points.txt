@@ -1,0 +1,3 @@
+[console_scripts]
+signtool = signtool.signtool:main
+

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-4a155e81998a23fc0f72eac65eaf8f40eb1283c1
-=======
 95d3264d7cd2c6670b3e8bd0b85a495498ee6873
->>>>>>> ca56302 (Adiciona projeto inicial)

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import Flask, render_template, request, jsonify
 import os
 import json
@@ -91,7 +93,7 @@ def generate_json():
         process = subprocess.Popen(["python", "C:\\HRCStructureRENDER\\parametros_imagem.py"], creationflags=subprocess.CREATE_NO_WINDOW)
         process.wait()
         run_main2_with_gif(stack_inicial)
-        return jsonify({"status": "Processo de geração de JSON iniciado com imagens."})
+        return jsonify({"status": "Processo de gera\u00e7\u00e3o de JSON iniciado com imagens."})
 
     elif not xml_file_path and not imagens_directory:
         return jsonify({"error": "Por favor, selecione um arquivo XML ou um diretório de imagens."}), 400
@@ -139,3 +141,4 @@ def run_main2_with_gif(stack_inicial):
 if __name__ == "__main__":
     threading.Thread(target=exibir_prints).start()
     app.run(host='0.0.0.0', port=5000)
+

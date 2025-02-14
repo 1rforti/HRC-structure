@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-from flask import Flask, render_template, request, jsonify
+ï»¿from flask import Flask, render_template, request, jsonify
 import os
 import json
 import xmltodict
@@ -17,8 +15,8 @@ usuario_decidiu_evento = threading.Event()
 
 def exibir_prints():
     while True:
-        text = prints_queue.get()  # Bloqueia até que uma mensagem esteja disponível
-        # Aqui você pode adicionar lógica para exibir as mensagens na interface web
+        text = prints_queue.get()  # Bloqueia atÃ© que uma mensagem esteja disponÃ­vel
+        # Aqui vocÃª pode adicionar lÃ³gica para exibir as mensagens na interface web
         print(text)
 
 @app.route('/')
@@ -96,10 +94,10 @@ def generate_json():
         return jsonify({"status": "Processo de gera\u00e7\u00e3o de JSON iniciado com imagens."})
 
     elif not xml_file_path and not imagens_directory:
-        return jsonify({"error": "Por favor, selecione um arquivo XML ou um diretório de imagens."}), 400
+        return jsonify({"error": "Por favor, selecione um arquivo XML ou um diret\u00f3rio de imagens."}), 400
 
     else:
-        return jsonify({"error": "Por favor, selecione apenas um arquivo XML ou um diretório de imagens, não ambos."}), 400
+        return jsonify({"error": "Por favor, selecione apenas um arquivo XML ou um diret\u00f3rio de imagens, nÃ£o ambos."}), 400
 
 def read_xml(xml_file_path):
     with open(xml_file_path, 'r', encoding='utf-8') as file:
@@ -141,4 +139,5 @@ def run_main2_with_gif(stack_inicial):
 if __name__ == "__main__":
     threading.Thread(target=exibir_prints).start()
     app.run(host='0.0.0.0', port=5000)
+
 

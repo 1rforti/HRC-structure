@@ -8,6 +8,10 @@ import cv2
 import pytesseract
 from PIL import Image
 import numpy as np
+<<<<<<< HEAD
+=======
+from tkinter import Tk, filedialog, Toplevel, Label, Button
+>>>>>>> ca56302 (Adiciona projeto inicial)
 import webbrowser
 
 caminho =  r"C:\Program Files\Tesseract-OCR"
@@ -16,7 +20,11 @@ pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
 
 
 # Diretório onde as imagens divididas estão localizadas
+<<<<<<< HEAD
 input_dir = "C:\\HRCStructureHHHHeadsUp\\GGPoker\\imagens"
+=======
+input_dir = "C:\\HRCStructureRENDER\\GGPoker\\imagens"
+>>>>>>> ca56302 (Adiciona projeto inicial)
 
 # Lista para armazenar as imagens
 images = []
@@ -43,7 +51,11 @@ column_1_texts = []
 
 
 # Carregue os parâmetros do arquivo JSON
+<<<<<<< HEAD
 with open("C:\\HRCStructureHHHHeadsUp\\parameters.json", "r") as param_file:
+=======
+with open("C:\\HRCStructureRENDER\\parameters.json", "r") as param_file:
+>>>>>>> ca56302 (Adiciona projeto inicial)
     parameters = json.load(param_file)
 
 
@@ -142,7 +154,11 @@ for i, group in enumerate(image_groups):
     group_texts.append(extracted_text)
 
     # Carregue o JSON gerado por parametros_imagem.py
+<<<<<<< HEAD
     with open("C:\\HRCStructureHHHHeadsUp\\parameters.json", "r") as param_file:
+=======
+    with open("C:\\HRCStructureRENDER\\parameters.json", "r") as param_file:
+>>>>>>> ca56302 (Adiciona projeto inicial)
         parameters = json.load(param_file)
         column_widths = [65, 335, 150, 65, 180]  # ou outros valores padrão
 
@@ -412,7 +428,11 @@ def close_main_window():
 
 
 # Inicialize a janela raiz
+<<<<<<< HEAD
 root = ()
+=======
+root = Tk()
+>>>>>>> ca56302 (Adiciona projeto inicial)
 root.withdraw()  # Oculta a janela raiz
 
  #Configurar um evento para fechar a janela principal
@@ -465,4 +485,8 @@ if output_file_path:
     popup_window.protocol("WM_DELETE_WINDOW", close_popup)
 
     # Inicie o loop principal da janela raiz
+<<<<<<< HEAD
     root.mainloop()
+=======
+    root.mainloop()
+>>>>>>> ca56302 (Adiciona projeto inicial)

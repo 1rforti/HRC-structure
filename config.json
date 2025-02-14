@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"final_window": {"x": null, "y": null, "width": null, "height": null}, "final_window_position": {"x": 312, "y": 312, "width": 427, "height": 155}, "main_window": {"height": null, "width": null, "x": null, "y": null}, "popup_window": {"x": null, "y": null, "width": null, "height": null}, "popup_window_position": {"x": null, "y": null, "width": null, "height": null}, "root_position": {"x": 234, "y": 234, "width": 404, "height": 329}}
+=======
+{"final_window": {"x": null, "y": null, "width": null, "height": null}, "final_window_position": {"x": 1189, "y": 259, "width": 555, "height": 230}, "main_window": {"height": null, "width": null, "x": null, "y": null}, "popup_window": {"x": null, "y": null, "width": null, "height": null}, "popup_window_position": {"x": 1355, "y": 284, "width": 473, "height": 190}, "root_position": {"x": 1514, "y": 397, "width": 626, "height": 378}}
+>>>>>>> ca56302 (Adiciona projeto inicial)

@@ -8,7 +8,17 @@ import webbrowser
 import zipfile
 import requests
 import certifi
+<<<<<<< HEAD
 from PIL import Image, ImageSequence
+=======
+from tkinter import *
+from tkinter import filedialog
+from tkinter import messagebox
+import tkinter as tk
+from tkinter import PhotoImage
+from tkinter import ttk
+from PIL import Image, ImageTk, ImageSequence
+>>>>>>> ca56302 (Adiciona projeto inicial)
 import shutil
 import subprocess
 import psutil
@@ -67,8 +77,13 @@ def realizar_atualizacao(prints_queue):
         latest_commit_sha = commit_info["sha"]
 
         current_commit_sha = ""
+<<<<<<< HEAD
         if os.path.exists("C:\\HRCStructureHHHHeadsUp\\commit_sha.txt"):
             with open("C:\\HRCStructureHHHHeadsUp\\commit_sha.txt", "r") as file:
+=======
+        if os.path.exists("C:\\HRCStructureRENDER\\commit_sha.txt"):
+            with open("C:\\HRCStructureRENDER\\commit_sha.txt", "r") as file:
+>>>>>>> ca56302 (Adiciona projeto inicial)
                 current_commit_sha = file.read().strip()
 
         if latest_commit_sha != current_commit_sha:
@@ -77,11 +92,19 @@ def realizar_atualizacao(prints_queue):
             response_updater = requests.get(url_updater)
 
             if response_updater.status_code == 200:
+<<<<<<< HEAD
                 with open("C:\\HRCStructureHHHHeadsUp\\main2.py", "wb") as file:
                     file.write(response_updater.content)
 
                 # Salvar o SHA do commit mais recente para o próximo teste de atualização
                 with open("C:\\HRCStructureHHHHeadsUp\\commit_sha.txt", "w") as file:
+=======
+                with open("C:\\HRCStructureRENDER\\main2.py", "wb") as file:
+                    file.write(response_updater.content)
+
+                # Salvar o SHA do commit mais recente para o próximo teste de atualização
+                with open("C:\\HRCStructureRENDER\\commit_sha.txt", "w") as file:
+>>>>>>> ca56302 (Adiciona projeto inicial)
                     file.write(latest_commit_sha)
 
                 # Mostrar a janela pop-up de confirmação
@@ -142,14 +165,24 @@ def janela_com_gif_e_prints():
     global janela, gif_label, prints_label, encerrar_threads, gif_frames
     
 
+<<<<<<< HEAD
     janela = ()
+=======
+    janela = tk.Tk()
+>>>>>>> ca56302 (Adiciona projeto inicial)
     janela.title("GIF com Prints")
     janela.overrideredirect(True)
 
     gif_image = Image.open("HRCStructure.gif")
+<<<<<<< HEAD
     gif_frames = [PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
 
     gif_label = Label(janela, image=gif_frames[0])
+=======
+    gif_frames = [ImageTk.PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
+
+    gif_label = tk.Label(janela, image=gif_frames[0])
+>>>>>>> ca56302 (Adiciona projeto inicial)
     gif_label.pack()
 
     largura_gif, altura_gif = gif_image.size
@@ -159,8 +192,13 @@ def janela_com_gif_e_prints():
     y = (tela_principal[1] - altura_gif) // 2
     janela.geometry(f"{largura_gif}x{altura_gif}+{x}+{y}")
 
+<<<<<<< HEAD
     prints_label = Label(janela, bg="black", fg="white", justify="left")
     prints_label.place(relx=0.5, rely=0.05, anchor=N)
+=======
+    prints_label = tk.Label(janela, bg="black", fg="white", justify="left")
+    prints_label.place(relx=0.5, rely=0.05, anchor=tk.N)
+>>>>>>> ca56302 (Adiciona projeto inicial)
     fonte_personalizada = ("Arial", 11)
     prints_label["font"] = fonte_personalizada
 
@@ -210,7 +248,11 @@ def show_confirmation_popup_async():
 
 def show_confirmation_popup():
     # Crie uma janela pop-up de confirmação
+<<<<<<< HEAD
     root = ()
+=======
+    root = tk.Tk()
+>>>>>>> ca56302 (Adiciona projeto inicial)
     root.withdraw()  # Esconda a janela principal
     user_input = messagebox.askquestion("Confirmação", "Deseja encerrar o programa e realizar a instalação/atualização?")
     return user_input
@@ -414,7 +456,11 @@ def generate_json():
     elif imagens_directory and not xml_file_path:
          print(f"Chamando run_main2_with_gif com stack_inicial: {stack_inicial}") 
          # Inicie o subprocesso sem exibir a janela de console
+<<<<<<< HEAD
          process = subprocess.Popen(["C:\\HRCStructureHHHHeadsUp\\parametros_imagem.exe"], creationflags=subprocess.CREATE_NO_WINDOW)
+=======
+         process = subprocess.Popen(["python", "parametros_imagem.py"], creationflags=subprocess.CREATE_NO_WINDOW)
+>>>>>>> ca56302 (Adiciona projeto inicial)
          # Aguarde a conclusão do processo
          process.wait()
          run_main2_with_gif(stack_inicial)
@@ -487,7 +533,11 @@ def browse_images():
     file_paths = filedialog.askopenfilenames(filetypes=[("Imagens", "*.png *.jpg *.jpeg *.gif")])
 
     # Diretório de destino onde as imagens serão copiadas
+<<<<<<< HEAD
     destination_directory = "C:\\HRCStructureHHHHeadsUp\\GGPoker\\imagens"
+=======
+    destination_directory = "C:\\HRCStructureRENDER\\GGPoker\\imagens"
+>>>>>>> ca56302 (Adiciona projeto inicial)
 
     # Limpe o diretório de destino antes de copiar as imagens
     for file_name in os.listdir(destination_directory):
@@ -516,11 +566,19 @@ def browse_images():
         #print(f"Erro ao executar parametros_imagem.py: {str(e)}")
         
 
+<<<<<<< HEAD
 root = ()
 root.title('HRCStructure - HHHHeadsUp')
 
 # Carregar o arquivo de ícone e definir o ícone da janela
 icon_path = 'C:\\HRCStructureHHHHeadsUp\\favicon.ico'
+=======
+root = Tk()
+root.title('HRCStructure - HHHHeadsUp')
+
+# Carregar o arquivo de ícone e definir o ícone da janela
+icon_path = 'C:\\HRCStructureRENDER\\favicon.ico'
+>>>>>>> ca56302 (Adiciona projeto inicial)
 icon = Image.open(icon_path)
 root.iconbitmap(icon_path)
 
@@ -598,7 +656,11 @@ def run_main2_with_gif(stack_inicial):
     def start_process():
         # Inicie o subprocesso sem exibir a janela de console
         # Substitua "Phyton" por "python"
+<<<<<<< HEAD
         process = subprocess.Popen(["C:\\HRCStructureHHHHeadsUp\\dist\\main2\\main2.py", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+=======
+        process = subprocess.Popen(["python","C:\\HRCStructureRENDER\\dist\\main2\\main2.py", "--stack", stack_inicial], creationflags=subprocess.CREATE_NO_WINDOW)
+>>>>>>> ca56302 (Adiciona projeto inicial)
         # Aguarde a conclusão do processo
         process.wait()
         # Quando o processo terminar, marque a variável como True
@@ -608,7 +670,11 @@ def run_main2_with_gif(stack_inicial):
     process_finished = [False]
 
     # Crie uma janela para exibir o GIF
+<<<<<<< HEAD
     gif_window = Toplevel()
+=======
+    gif_window = tk.Toplevel()
+>>>>>>> ca56302 (Adiciona projeto inicial)
     gif_window.title("GIF Window")
     gif_window.overrideredirect(True)
     
@@ -623,10 +689,17 @@ def run_main2_with_gif(stack_inicial):
 
     # Carregue o GIF com Pillow e converta em uma lista de frames
     gif_image = Image.open("HRCStructure_json.gif")
+<<<<<<< HEAD
     frames = [PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
 
     # Exiba o GIF em um widget Label
     gif_label = Label(gif_window, image=frames[0])
+=======
+    frames = [ImageTk.PhotoImage(frame) for frame in ImageSequence.Iterator(gif_image)]
+
+    # Exiba o GIF em um widget Label
+    gif_label = tk.Label(gif_window, image=frames[0])
+>>>>>>> ca56302 (Adiciona projeto inicial)
     gif_label.image = frames[0]  # Garante que a imagem não seja coletada pelo garbage collector
     gif_label.pack()
 

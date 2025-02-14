@@ -122,7 +122,7 @@ Scrapy==2.11.0
 scrapy-selenium==0.0.7
 scrapy-splash==0.9.0
 screeninfo==0.8.1
-selenium==4.14.0
+selenium>=3.141,<4.0.0
 service-identity==23.1.0
 signtool==4.0.1
 six==1.16.0
@@ -151,3 +151,4 @@ wsproto==1.2.0
 xmltodict==0.13.0
 yarg==0.1.9
 zope.interface==6.1
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRCStructure - HHHHeadsUp</title>
+</head>
+<body>
+    <h1>HRCStructure - HHHHeadsUp</h1>
+    <button onclick="startUpdate()">Verificar Atualiza��es</button>
+    <div id="status"></div>
+
+    <script>function startUpdate() {
+            fetch('/update', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    checkStatus();
+                });
+        }
+
+        function checkStatus() {
+            fetch('/status')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('status').innerText = data.message;
+                    if (data.message !== "") {
+                        setTimeout(checkStatus, 1000);
+                    }
+                });
+        }</script>
+</body>
+</html>

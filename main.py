@@ -13,6 +13,15 @@ def home():
 def gifs():
     return render_template('gifs.html')
 
+@app.route('/gifs2')
+def gifs():
+    return render_template('gifs2.html')
+
+@app.route('/gifs3')
+def gifs():
+    return render_template('gifs3.html')
+
+
 @app.route('/generate_json', methods=['POST'])
 def generate_json():
     xml_file = request.files.get('xml_file')

@@ -65,7 +65,7 @@ def generate_json():
         prize = float(entry.get('@prize', 0))
         prize_bounty_component = float(entry.get('@prizeBountyComponent', 0))
         calculated_prize = prize - prize_bounty_component
-        calculated_prize = round(calculated_prize, 2)
+        calculated_prize = round(calculated_prize, 1)
 
         if calculated_prize > 0:
             prize_dict[position] = calculated_prize

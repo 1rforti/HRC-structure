@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de JSON de Torneios</title>
+    <title>HRCStructureHHHHeadsUP</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Substitua pelo código da cor desejada */
+            color: #333333; /* Substitua pelo código da cor desejada para o texto */
+        }
+
+        h1 {
+            color: #000000; /* Substitua pelo código da cor desejada para o título */
+        }
+
+        a {
+            color: #1a73e8; /* Substitua pelo código da cor desejada para os links */
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo ao gerador de JSON de torneios!</h1>
+    <h1>Versão WEB Em desenvolvimento</h1>
+    <img src="{{ url_for('static', filename='hrcstructure.png') }}" alt="Logo">
     <form action="/generate_json" method="post" enctype="multipart/form-data">
         <label for="xml_file">Selecione o arquivo XML:</label>
         <input type="file" id="xml_file" name="xml_file" accept=".xml" required><br><br>
@@ -14,5 +30,7 @@
         <input type="number" id="stack_inicial" name="stack_inicial" required><br><br>
         <button type="submit">Gerar JSON</button>
     </form>
+    <a href="https://www.exemplo.com">Visite nosso site</a>
 </body>
 </html>
+

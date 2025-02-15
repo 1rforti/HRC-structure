@@ -9,6 +9,10 @@ app = Flask(__name__, template_folder='templates')
 def home():
     return render_template('index.html')
 
+@app.route('/gifs')
+def gifs():
+    return render_template('gifs.html')
+
 @app.route('/generate_json', methods=['POST'])
 def generate_json():
     xml_file = request.files.get('xml_file')

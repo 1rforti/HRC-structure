@@ -3,3 +3,8 @@ wheel
 flask
 xmltodict
 gunicorn
+opencv-python
+pytesseract
+Pillow
+numpy
+

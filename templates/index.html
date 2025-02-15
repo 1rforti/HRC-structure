@@ -22,7 +22,7 @@
 </head>
 <body>
     <h1>Versão WEB Em desenvolvimento</h1>
-    <img src="{{ url_for('static', filename='hrcstructure.png') }}" alt="Logo">
+    <img src="{{ url_for('static', filename='1.gif') }}" alt="Instrução Exportar XML SharkScope">
     <form action="/generate_json" method="post" enctype="multipart/form-data">
         <label for="xml_file">Selecione o arquivo XML:</label>
         <input type="file" id="xml_file" name="xml_file" accept=".xml" required><br><br>
@@ -30,7 +30,11 @@
         <input type="number" id="stack_inicial" name="stack_inicial" required><br><br>
         <button type="submit">Gerar JSON</button>
     </form>
+    <img src="{{ url_for('static', 2.png') }}" alt="Instrução Gerar JSON">
     <a href="https://www.exemplo.com">Visite nosso site</a>
+    <br><br>
+    <img src="{{ url_for('static', filename='instrucao2.gif') }}" alt="Instrução 2">
 </body>
 </html>
+
 

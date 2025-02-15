@@ -121,7 +121,7 @@ def process_images():
         combined_image = cv2.vconcat(group)
 
         # Salva a imagem combinada em um arquivo
-        output_filename = f"imagem_combinada_{i}.png"
+        output_filename = os.path.join(input_dir, f"imagem_combinada_{i}.png")
         cv2.imwrite(output_filename, combined_image)
 
         # Carrega a imagem combinada

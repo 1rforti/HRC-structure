@@ -245,11 +245,11 @@ def process_images():
         # Encontrou a palavra 'Result', pegue o texto após ela
         column_5_text = column_5_text[result_index + len("Result"):]
         column_5_text = column_5_text.replace("i", "1")
-        column_5_text = column_5_text.replace("® ", "i")
+        column_5_text = column_5_text.replace("\u00ae ", "i")
         column_5_text = re.sub(r'[Ss]', '$', column_5_text)
         column_5_text = re.sub(r'[Finished]', '', column_5_text)
         column_5_text = re.sub(r'[a-zA-Z]', 'i', column_5_text)
-        column_5_text = re.sub(r'[]°&!(_=§°/?><|\¢)|=-®]', 'i', column_5_text)
+        column_5_text = re.sub(r'[]°&!(_=§°/?><|\¢)|=-\u00ae]', 'i', column_5_text)
 
         print(column_5_text)
 
@@ -393,4 +393,5 @@ def read_xml(xml_file):
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
+
 

@@ -14,11 +14,11 @@ def gifs():
     return render_template('gifs.html')
 
 @app.route('/gifs2')
-def gifs():
+def gifs2():
     return render_template('gifs2.html')
 
 @app.route('/gifs3')
-def gifs():
+def gifs3():
     return render_template('gifs3.html')
 
 

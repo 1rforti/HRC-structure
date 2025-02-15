@@ -1,4 +1,4 @@
-﻿from flask import Flask, render_template, request, jsonify
+﻿from flask import Flask, render_template, request, jsonify, send_file
 import os
 import json
 import xmltodict
@@ -64,7 +64,7 @@ def generate_json():
     with open(output_file_path, 'w') as file:
         json.dump(output_data, file, indent=2)
 
-    return jsonify({"status": "JSON gerado e salvo com sucesso!", "output_file_path": output_file_path})
+    return send_file(output_file_path, as_attachment=True, download_name='output.json')
 
 def read_xml(xml_file):
     data_dict = xmltodict.parse(xml_file.read())

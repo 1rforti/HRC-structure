@@ -16,15 +16,7 @@ def home():
 
 @app.route('/gifs')
 def gifs():
-    return render_template('gifs.html')
-
-@app.route('/gifs2')
-def gifs2():
-    return render_template('gifs2.html')
-
-@app.route('/gifs3')
-def gifs3():
-    return render_template('gifs3.html')
+    return render_template('combined_gifs.html')
 
 @app.route('/generate_json', methods=['POST'])
 def generate_json():

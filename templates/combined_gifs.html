@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruções em GIFs</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Substitua pelo código da cor desejada */
+            color: #333333; /* Substitua pelo código da cor desejada para o texto */
+        }
+
+        h1 {
+            color: #000000; /* Substitua pelo código da cor desejada para o título */
+        }
+
+        a {
+            color: #1a73e8; /* Substitua pelo código da cor desejada para os links */
+        }
+
+        .gif-container {
+            margin-bottom: 20px; /* Adiciona espaçamento entre os GIFs */
+        }
+    </style>
+</head>
+<body>
+    <h1>Instruções em GIFs</h1>
+
+    <div class="gif-container">
+        <h2>Instrução Exportar XML SharkScope</h2>
+        <img src="{{ url_for('static', filename='1.gif') }}" alt="Instrução Exportar XML SharkScope">
+    </div>
+
+    <div class="gif-container">
+        <h2>Importar no HRC</h2>
+        <img src="{{ url_for('static', filename='2.gif') }}" alt="Importar no HRC">
+    </div>
+
+    <div class="gif-container">
+        <h2>Instrução Gerar JSON</h2>
+        <img src="{{ url_for('static', filename='3.gif') }}" alt="Instrução Gerar JSON">
+    </div>
+
+    <a href="/">Voltar para a página principal</a>
+</body>
+</html>

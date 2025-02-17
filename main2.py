@@ -73,6 +73,10 @@ def generate_json():
 
     return send_file(output_file_path, as_attachment=True, download_name='output.json')
 
+@app.route('/process_images', methods=['GET'])
+def process_images_form():
+    return render_template('process_images.html')
+
 @app.route('/process_images', methods=['POST'])
 def process_images():
     # Diretório temporário para armazenar as imagens enviadas
@@ -394,4 +398,3 @@ def read_xml(xml_file):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5001))
     app.run(host='0.0.0.0', port=port)
-

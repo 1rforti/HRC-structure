@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processar Imagens</title>
+</head>
+<body>
+    <h1>Processar Imagens</h1>
+    <form action="/process_images" method="post" enctype="multipart/form-data">
+        <label for="images">Selecione as imagens:</label>
+        <input type="file" id="images" name="images" multiple required>
+        <br><br>
+        <label for="stack_inicial_images">Stack Inicial:</label>
+        <input type="number" id="stack_inicial_images" name="stack_inicial_images" required>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

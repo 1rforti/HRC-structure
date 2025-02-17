@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hrc-structure-main
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+
+  - type: web
+    name: hrc-structure-main2
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main2.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production

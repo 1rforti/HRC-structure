@@ -1,4 +1,5 @@
 ﻿from flask import Flask, render_template, request, jsonify, send_file
+from flask import Flask, send_from_directory
 import os
 import json
 import xmltodict
@@ -9,6 +10,10 @@ import numpy as np
 import re
 
 app = Flask(__name__, template_folder='templates')
+
+@app.route('/main.py')
+def serve_main_py():
+    return send_from_directory('', 'main.py')
 
 @app.route('/')
 def home():

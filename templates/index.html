@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- PyScript CSS -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css">
-    <!-- This script tag bootstraps PyScript -->
-    <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
     <title>HRCStructureHHHHeadsUP</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <style>
@@ -25,12 +21,13 @@
             margin-bottom: 10px; /* Adiciona espaçamento abaixo de cada link */
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
 </head>
 <body>
-    <script type="mpy" src="main.py"></script>
     <h1>Versão WEB Funcional - em desenvolvimento</h1>
     <a href="https://github.com/1rforti/HRC-structure?tab=readme-ov-file#holdem-resources-structure-generator">Versão para instalar, com recurso OCR para estrutura do GG a partir de imagens geradas pelo pokercraft (há tempo trarei para a versão web tb)</a>
     <a href="https://1drv.ms/x/s!AuSzVyNIrPbhvPZjFhBbl0joVhXZCQ?e=rIKpV8">Planilha Bounty e Hud Starcaption</a>
+
     <a href="/gifs">Instrução Exportar XML SharkScope</a>
     <a href="/gifs">Instrução Gerar JSON</a>
     <a href="/gifs">Importar no HRC</a>
@@ -57,9 +54,28 @@
         <button type="submit">Gerar JSON a partir das Imagens</button>
     </form>
 
-
     <img src="{{ url_for('static', filename='hrcstructure.png') }}" alt="Logo">
     <br><br>
+
+    <script>
+        async function loadPyodideAndPackages() {
+            let pyodide = await loadPyodide();
+            console.log("Pyodide loaded!");
+            return pyodide;
+        }
+
+        let pyodide = loadPyodideAndPackages();
+
+        async function runMainPy() {
+            let pyodideInstance = await pyodide;
+            // Carregar o código do main.py
+            let code = await fetch('./main.py').then(response => response.text());
+            // Executar o código Python
+            let output = await pyodideInstance.runPythonAsync(code);
+            console.log(output); // Resultado da execução do código Python
+        }
+
+        runMainPy();
+    </script>
 </body>
 </html>
-

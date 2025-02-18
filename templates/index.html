@@ -69,7 +69,7 @@
         async function runMainPy() {
             let pyodideInstance = await pyodide;
             // Carregar o código do main.py
-            let code = await fetch('./main.py').then(response => response.text());
+            let code = await fetch('/main.py').then(response => response.text());
             // Executar o código Python
             let output = await pyodideInstance.runPythonAsync(code);
             console.log(output); // Resultado da execução do código Python

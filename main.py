@@ -90,9 +90,6 @@ def process_images():
     input_dir = "temp_images"
     os.makedirs(input_dir, exist_ok=True)
 
-      # Carregar parâmetros uma única vez
-    with open("parameters.json", "r") as param_file:
-        parameters = json.load(param_file)
 
     # Salva as imagens enviadas no diretório temporário
     images = []
@@ -114,7 +111,7 @@ def process_images():
     # Lista para armazenar os textos da 5 e 3 coluna de todas as imagens
     column_5_texts = []
     column_3_texts = []
-    column_1_texts = []
+   
 
     # Carregue os parâmetros do arquivo JSON
     with open("parameters.json", "r") as param_file:
@@ -242,12 +239,12 @@ def process_images():
         # Adicione-o à lista de textos da quinta coluna de todas as imagens
         column_5_texts.append(column_texts[-1])
         column_3_texts.append(column_texts[2])
-        column_1_texts.append(column_texts[0])
+        
 
     # Combine todos os textos da quinta coluna de todas as imagens
     column_5_text = "\n".join(column_5_texts)
     column_3_text = "\n".join(column_3_texts)
-    column_1_text = "\n".join(column_1_texts)
+    
 
     # Combine todos os textos extraídos em um único texto
     extracted_text = "\n".join(group_texts)

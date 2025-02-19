@@ -110,7 +110,7 @@ def process_images():
 
     # Lista para armazenar os textos da 5 e 3 coluna de todas as imagens
     column_5_texts = []
-    column_3_texts = []
+   
    
 
     # Carregue os parâmetros do arquivo JSON
@@ -238,12 +238,12 @@ def process_images():
         # Agora, a quinta coluna estará em column_texts[-1] da imagem atual
         # Adicione-o à lista de textos da quinta coluna de todas as imagens
         column_5_texts.append(column_texts[-1])
-        column_3_texts.append(column_texts[2])
+        
         
 
     # Combine todos os textos da quinta coluna de todas as imagens
     column_5_text = "\n".join(column_5_texts)
-    column_3_text = "\n".join(column_3_texts)
+    
     
 
     # Combine todos os textos extraídos em um único texto
@@ -324,7 +324,7 @@ def process_images():
     tournament_name = ""
 
     # Extrair o nome do torneio da coluna 3
-    tournament_name_lines = column_3_text.strip().split('\n')
+    tournament_name_lines = column_5_text.strip().split('\n')
     if tournament_name_lines:
         tournament_name = tournament_name_lines[0]
 

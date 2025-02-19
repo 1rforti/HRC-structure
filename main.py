@@ -90,6 +90,10 @@ def process_images():
     input_dir = "temp_images"
     os.makedirs(input_dir, exist_ok=True)
 
+      # Carregar parâmetros uma única vez
+    with open("parameters.json", "r") as param_file:
+        parameters = json.load(param_file)
+
     # Salva as imagens enviadas no diretório temporário
     images = []
     for file in request.files.getlist('images'):

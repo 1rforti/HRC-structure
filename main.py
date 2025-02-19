@@ -90,7 +90,6 @@ def process_images():
     input_dir = "temp_images"
     os.makedirs(input_dir, exist_ok=True)
 
-
     # Salva as imagens enviadas no diretório temporário
     images = []
     for file in request.files.getlist('images'):
@@ -110,8 +109,8 @@ def process_images():
 
     # Lista para armazenar os textos da 5 e 3 coluna de todas as imagens
     column_5_texts = []
-   
-   
+    column_3_texts = []
+    column_1_texts = []
 
     # Carregue os parâmetros do arquivo JSON
     with open("parameters.json", "r") as param_file:
@@ -238,13 +237,13 @@ def process_images():
         # Agora, a quinta coluna estará em column_texts[-1] da imagem atual
         # Adicione-o à lista de textos da quinta coluna de todas as imagens
         column_5_texts.append(column_texts[-1])
-        
-        
+        column_3_texts.append(column_texts[2])
+        column_1_texts.append(column_texts[0])
 
     # Combine todos os textos da quinta coluna de todas as imagens
     column_5_text = "\n".join(column_5_texts)
-    
-    
+    column_3_text = "\n".join(column_3_texts)
+    column_1_text = "\n".join(column_1_texts)
 
     # Combine todos os textos extraídos em um único texto
     extracted_text = "\n".join(group_texts)
@@ -324,7 +323,7 @@ def process_images():
     tournament_name = ""
 
     # Extrair o nome do torneio da coluna 3
-    tournament_name_lines = column_5_text.strip().split('\n')
+    tournament_name_lines = column_3_text.strip().split('\n')
     if tournament_name_lines:
         tournament_name = tournament_name_lines[0]
 

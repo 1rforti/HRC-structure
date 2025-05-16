@@ -1,0 +1,24 @@
+Fair Source License
+
+Versão 1.0
+
+Copyright (c) 2023, [Ricardo de Souza Forti]
+
+Autorizo a utilização deste software, desde que cumpram as seguintes condições:
+
+1. Uso Não-Comercial: Você pode usar, modificar e distribuir este software somente para fins não comerciais. Fins comerciais incluem, mas não estão limitados a, a venda do software, o uso em produtos ou serviços comerciais e a distribuição em benefício comercial.
+
+2. Divulgação de Modificações: Se você modificar este software, deve tornar suas modificações disponíveis ao público, incluindo o código-fonte das modificações, sob os termos desta licença.
+
+3. Atribuição: Deve ser fornecida atribuição adequada ao autor original deste software.
+
+4. Sem Garantia: Este software é fornecido "como está", sem garantias de qualquer tipo, expressas ou implícitas. O autor não é responsável por quaisquer danos ou responsabilidades decorrentes do uso deste software.
+
+5. Funcionalidades Futuras: Este software pode incluir funcionalidades que são gratuitas no momento, mas que podem ser cobradas no futuro. Funcionalidades específicas a serem implementadas podem ser anunciadas conforme o desenvolvimento progride.
+
+6. Fim da Licença: Se você não cumprir os termos desta licença, sua permissão para usar este software será revogada automaticamente.
+
+
+
+
+
